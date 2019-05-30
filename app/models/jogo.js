@@ -1,7 +1,7 @@
 function Jogo(dados = 5, lados = 6) {
 	console.log('model: executar contrutor de jogo');
 	this.dados = dados;
-	this.lados = dados;
+	this.lados = lados;
 	this.pontos = 0;
 	this.n = 0;
 }
@@ -13,17 +13,19 @@ Jogo.prototype.novoJogo = function() {
 }; 
 
 Jogo.prototype.lancarUmDado = function() {
-	var valorAleatorio = Math.random(); //Valor entre [0 e 1]
-	var lado = 1 + parseInt(valorAleatorio * (this.lados-1));
+	var valorAleatorio = Math.random(); //No intervalo [0,1]
+	// De [0,1) * 6 => [0,6)
+	// Usando Math.floor temos [0,1,2,3,4,5]
+	// Soamndo uma unidade temos [1,2,3,4,5,6]
+	var lado = 1+ Math.floor(valorAleatorio * this.lados);
 	return lado;
 }; 
 
 Jogo.prototype.lancarDados = function() {
 	console.log('model: lancarDados');
-	var lancamento = []
+	var lancamento = [];
 	for (var i = 0; i < this.dados; i++){
-		lancamento[i] = this.lancarUmDado();
-		
+		lancamento[i] = this.lancarUmDado();	
 	}
 	return lancamento;
 }; 
