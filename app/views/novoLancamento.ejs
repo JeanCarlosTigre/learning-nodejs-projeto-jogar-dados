@@ -3,10 +3,32 @@
 <html>
 <head>
 	<title>Projeto Jogar Dados</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
 
 <main>
+
+	<div class="container col-12 col-sm-8 col-md-6 bg-light text-center bg-light p-2">
+
+		<div class="container">
+
+			<div class="card-deck my-2">
+
+				<div class="col-6 p-2">
+
+					<div class="card">
+						
+						<div class="card-header">Pontos Acumulados</div>
+						<div class="card-body"><%= pontosAcumulados %></div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
 	
 	<h1>Projeto Jogar Dados</h1>
 
@@ -22,6 +44,12 @@
 
 	<button type="button" id="buttonLancarDados">Lancar Dados</button>
 
+	<button type="buton" id="buttonReiniciarJogo">Reiniciar</button>
+
+	<button type="buton" id="buttonEncerrarJogo">Encerrar</button>
+
+</div>
+
 </main>
 
 </body>
@@ -33,6 +61,14 @@
 
 		$('#buttonLancarDados').click(function(){
 			location.href='lancarDados';
+		});
+
+		$('#buttonReiniciarJogo').click(function(){
+			location.href='reiniciar';
+		});
+
+		$('#buttonEncerrarJogo').click(function(){
+			location.href='encerrar';
 		});
 
 	});
