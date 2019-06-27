@@ -4,16 +4,26 @@
 <head>
 	<title>Projeto jogar dados</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+		<style type="text/css">
+			
+			body{
+				background-color: light;
+			}
+
+		</style>	
+
 </head>
 <body>
 
 	<main>
 
-	<div class="container col-12 col-sm-8 col-md-6 bg-dark p-2 text-center">
+	<div class="container col-12 col-sm-8 col-md-6 bg-light p-2 text-center">
 
-		<h1 class="text-primary">Projeto Jogar Dados</h1>
+		<h1 class="text-dark">Projeto Jogar Dados</h1>
+		 <hr class="my-4">
 
-		<div class="container bg-dark">
+		<div class="container bg-light">
 			
 			<div class="card-deck my-2">
 
@@ -21,7 +31,7 @@
 					
 					<div class="card">
 						
-						<div class="card-header text-primary">Pontos Acumulados</div>
+						<div class="card-header text-dark">Pontos Acumulados</div>
 						<div class="card-body bg-secondary text-light"><%= pontosAcumulados %></div>
 
 					</div>
@@ -33,7 +43,7 @@
 					
 					<div class="card">
 						
-						<div class="card-header text-primary">Número de lançamentos</div>
+						<div class="card-header text-dark">Número de lançamentos</div>
 						<div class="card-body bg-secondary text-light"><%= nLancamentos%></div>
 
 					</div>
@@ -45,10 +55,10 @@
 					
 					<div class="card">
 						
-					<div class="card-header text-primary">Lançamentos</div>
+					<div class="card-header text-dark">Lançamentos</div>
 
 
-					<div class="card-body bg-secondary text-light">
+					<div class="card-body bg-light text-light">
 
 						<% for (var i=0; i < lancamento.length; i++) { %>
 
@@ -67,7 +77,7 @@
 					
 					<div class="card">
 						
-					<div class="card-header text-primary">Mostra Resultado</div>
+					<div class="card-header text-dark">Mostra Resultado</div>
 
 
 					<div class="card-body bg-secondary text-light">
@@ -99,7 +109,7 @@
 					
 					<div class="card">
 						
-						<div class="card-header text-primary">Lançamento do jogo</div>
+						<div class="card-header text-dark">Lançamento do jogo</div>
 						<div class="card-body bg-secondary text-light"><%= jogoLancamento %></div>
 
 					</div>
@@ -111,7 +121,7 @@
 					
 					<div class="card">
 						
-						<div class="card-header text-primary">Pontos do Lançamento</div>
+						<div class="card-header text-dark">Pontos do Lançamento</div>
 						<div class="card-body bg-secondary text-light"><%= pontosLancamento %></div>
 
 					</div>
@@ -126,21 +136,21 @@
 
 		</div>
 
-		<div class="col-12 mx-auto mt-2 px-4">
+		<!-- <div class="col-12 mx-auto mt-2 px-4"> -->
 
-		<button class="btn btn-success text-dark btn-block" type="button" id="buttonLancarDados">Lançar Dados</button>
+		<button class="btn btn-success btn-lg" type="button" id="buttonLancarDados">Lançar Dados</button>
 
-		</div>
-		<div class="col-6 mx-auto p-4">
+		<!-- </div> -->
+		<!-- <div class="col-6 mx-auto p-4"> -->
 
-		<button class="btn btn-warning btn-block text-dark" type="button" id="buttonReiniciarJogo">Reiniciar</button>
+		<button class="btn btn-warning btn-lg" type="button" id="buttonReiniciarJogo">Reiniciar</button>
 
-		</div>
-		<div class="col-6 mx-auto p-4">
+		<!-- </div> -->
+		<!-- <div class="col-6 mx-auto p-4"> -->
 
-		<button class="btn btn-danger btn-block text-dark" type="button" id="buttonEncerrarJogo">Encerrar</button>
+		<button class="btn btn-danger btn-lg" type="button" id="buttonEncerrarJogo">Encerrar</button>
 
-		</div>
+		<!-- </div> -->
 
 		
 
